@@ -23,8 +23,8 @@ public class MioArrayDinamico {
 	}
 
 	public int getElementoSuccessivo() {
+		this.ultimoIndice++;
 		if (hasAncoraElementi()) {
-			this.ultimoIndice++;
 			return this.arrayAnto[this.ultimoIndice];
 		} else {
 			return 404;// ????
@@ -47,13 +47,13 @@ public class MioArrayDinamico {
 	}
 
 	@Override
-	public  String toString() {
-		String ciao="";
+	public String toString() {
+		String ciao = "";
 		for (int i = 0; i < arrayAnto.length; i++) {
-			 ciao += " " + arrayAnto[i];
-			
+			ciao += " " + arrayAnto[i];
+
 		}
-		
+
 		return ciao;
 	}
 }
