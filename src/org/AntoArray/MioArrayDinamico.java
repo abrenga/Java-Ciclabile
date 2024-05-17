@@ -1,5 +1,7 @@
 package org.AntoArray;
 
+import java.util.Arrays;
+
 public class MioArrayDinamico {
 	private int[] arrayAnto;
 	private int ultimoIndice;
@@ -21,11 +23,26 @@ public class MioArrayDinamico {
 	}
 
 	public int getElementoSuccessivo() {
-		
-		
+		if (hasAncoraElementi()) {
+			this.ultimoIndice++;
+			return this.arrayAnto[this.ultimoIndice];
+		} else {
+			return 404;// ????
+		}
+
 	}
 
 	public boolean hasAncoraElementi() {
-		return true;
+		if (this.ultimoIndice < arrayAnto.length) {
+			return true;
+		}
+		return false;
+	}
+
+	public void addElemento(int nuovoElemento) {
+		int nuovaDimensionenArray = arrayAnto.length + 1;
+		arrayAnto = Arrays.copyOf(arrayAnto, nuovaDimensionenArray);
+		arrayAnto[arrayAnto.length - 1] = nuovoElemento;
+
 	}
 }
