@@ -32,7 +32,7 @@ public class MioArrayDinamico {
 
 	}
 
-	public boolean hasAncoraElementi() {
+	private boolean hasAncoraElementi() {
 		if (this.ultimoIndice < arrayAnto.length) {
 			return true;
 		}
@@ -44,5 +44,13 @@ public class MioArrayDinamico {
 		arrayAnto = Arrays.copyOf(arrayAnto, nuovaDimensionenArray);
 		arrayAnto[arrayAnto.length - 1] = nuovoElemento;
 
+	}
+
+	@Override
+	public  String toString() {
+		for (int i = 0; i < arrayAnto.length; i++) {
+			String ciao = "ciao" + arrayAnto[i];
+			return ciao;
+		}
 	}
 }
