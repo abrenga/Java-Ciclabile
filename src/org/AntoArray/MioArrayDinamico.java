@@ -48,9 +48,12 @@ public class MioArrayDinamico {
 
 	@Override
 	public  String toString() {
+		String ciao="";
 		for (int i = 0; i < arrayAnto.length; i++) {
-			String ciao = "ciao" + arrayAnto[i];
-			return ciao;
+			 ciao += " " + arrayAnto[i];
+			
 		}
+		
+		return ciao;
 	}
 }
